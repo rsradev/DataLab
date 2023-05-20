@@ -1,13 +1,12 @@
 #!/home/raddy/.pyenv/shims/python
 
-
 from kafka import KafkaProducer # pip install kafka-python
 import numpy as np              # pip install numpy
 from sys import argv, exit
 from time import time, sleep
 
-# different device "profiles" with different 
-# distributions of values to make things interesting
+	# different device "profiles" with different 
+	# distributions of values to make things interesting
 # tuple --> (mean, std.dev)
 DEVICE_PROFILES = {
 	"boston": {'temp': (51.3, 17.7), 'humd': (77.4, 18.7), 'pres': (1019.9, 9.5) },
