@@ -1,0 +1,14 @@
+Operator -|-> Action Operator
+          |-> Transfer Operator
+          |-> Sensor Operator
+
+
+Airflow components:
+
+    Web Server
+    
+    Metastore
+
+    Scheduler
+
+    Executro

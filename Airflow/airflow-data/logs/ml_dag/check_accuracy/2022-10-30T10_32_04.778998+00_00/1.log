@@ -1,0 +1,24 @@
+[2022-10-30 10:32:06,551] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: ml_dag.check_accuracy 2022-10-30T10:32:04.778998+00:00 [queued]>
+[2022-10-30 10:32:06,567] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: ml_dag.check_accuracy 2022-10-30T10:32:04.778998+00:00 [queued]>
+[2022-10-30 10:32:06,568] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-30 10:32:06,568] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2022-10-30 10:32:06,568] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-30 10:32:06,577] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): check_accuracy> on 2022-10-30T10:32:04.778998+00:00
+[2022-10-30 10:32:06,580] {standard_task_runner.py:52} INFO - Started process 1342 to run task
+[2022-10-30 10:32:06,586] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'ml_dag', 'check_accuracy', '2022-10-30T10:32:04.778998+00:00', '--job-id', '8', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/branching.py', '--cfg-path', '/tmp/tmp13nyv6yu', '--error-file', '/tmp/tmpcgp4hw9i']
+[2022-10-30 10:32:06,590] {standard_task_runner.py:77} INFO - Job 8: Subtask check_accuracy
+[2022-10-30 10:32:06,638] {logging_mixin.py:104} INFO - Running <TaskInstance: ml_dag.check_accuracy 2022-10-30T10:32:04.778998+00:00 [running]> on host 4f324a9bb170
+[2022-10-30 10:32:06,693] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=ml_dag
+AIRFLOW_CTX_TASK_ID=check_accuracy
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-30T10:32:04.778998+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-30T10:32:04.778998+00:00
+[2022-10-30 10:32:06,694] {python.py:151} INFO - Done. Returned value was: ['accurate', 'top_accurate']
+[2022-10-30 10:32:06,694] {skipmixin.py:124} INFO - Following branch ['accurate', 'top_accurate']
+[2022-10-30 10:32:06,702] {skipmixin.py:155} INFO - Skipping tasks ['inaccurate']
+[2022-10-30 10:32:06,754] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=ml_dag, task_id=check_accuracy, execution_date=20221030T103204, start_date=20221030T103206, end_date=20221030T103206
+[2022-10-30 10:32:06,791] {taskinstance.py:1265} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2022-10-30 10:32:06,837] {local_task_job.py:151} INFO - Task exited with return code 0
