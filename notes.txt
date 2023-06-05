@@ -1,0 +1,25 @@
+Kafka - > PS
+Spark -> PS + U + NU
+Delta -> Doc + YT
+Airflow -> U 
+
+
+Spark:
+master/driver:
+spark-class org.apache.spark.deploy.master.Master --host ProBook
+
+
+worker/executor:
+spark-class org.apache.spark.deploy.worker.Worker spark://ProBook:7077 --host ProBook
+
+spark-submit --master spark://ProBook:7077 --name SparkSumitApp
+--total-executors-cores 4 --executor-memory 2g --executor-cores 2 "SCRIPT LOCATION"
+
+
+RDD:
+    -> Native spark objects
+    -> In memory 
+    -> Split into partitions 
+    -> Read only
+    -> Resilient(autorecover)
+    
