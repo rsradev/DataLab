@@ -1,0 +1,2 @@
+1. Tesnor(Nu) + MLOps(U)
+2. SUNDL(U) + DevOps(U)

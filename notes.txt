@@ -4,6 +4,9 @@ Delta -> Doc + YT
 Airflow -> U 
 
 
+**1. Tesnor(Nu) + MLOps(U) + Dj
+2. SUNDL(U) + DevOps(U)
+
 Spark:
 master/driver:
 spark-class org.apache.spark.deploy.master.Master --host ProBook
