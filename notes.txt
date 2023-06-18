@@ -1,11 +1,10 @@
-Kafka - > PS
-Spark -> PS + U + NU
-Delta -> Doc + YT
+Spark   -> PS + U + NU
+Delta   -> Doc + YT
 Airflow -> U 
+DevOps  -> BtoA, Go, Micro(U)
+Kafka   -> YT
 
-
-**1. Tesnor(Nu) + MLOps(U) + Dj
-2. SUNDL(U) + DevOps(U)
+Python, Spark, Go, DevOps Tools, Data Tools, Rust, ML
 
 Spark:
 master/driver:
@@ -25,4 +24,20 @@ RDD:
     -> Split into partitions 
     -> Read only
     -> Resilient(autorecover)
-    
+   
+
+
+
+kafka:
+
+zookeeper:
+$KAFKA_HOME/bin/zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties
+
+start kafk:
+$KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties 
+
+producer:
+$KAFKA_HOME/bin/kafka-console-producer.sh --topic sample-topic --broker-list localhost:9092
+
+consumer:
+$KAFKA_HOME/bin/kafka-console-consumer.sh --topic sample-topic --from-beginning --bootstrap-server localhost:9092
