@@ -3,8 +3,7 @@ Delta   -> Doc + YT
 Airflow -> U 
 DevOps  -> BtoA, Go, Micro(U)
 Kafka   -> YT
-
-Python, Spark, Go, DevOps Tools, Data Tools, Rust, ML
+Python  -> Algo
 
 Spark:
 master/driver:
