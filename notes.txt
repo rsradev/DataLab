@@ -1,11 +1,3 @@
-Spark   -> PS + U + NU
-Delta   -> Doc + YT
-Airflow -> U 
-DevOps  -> BtoA, Go, Micro(U)
-Kafka   -> YT
-
-Python, Spark, Go, DevOps Tools, Data Tools, Rust, ML
-
 Spark:
 master/driver:
 spark-class org.apache.spark.deploy.master.Master --host ProBook
