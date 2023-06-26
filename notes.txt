@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 Spark   -> PS + U + NU
 Delta   -> Doc + YT
 Airflow -> U 
 DevOps  -> BtoA, Go, Micro(U)
 Kafka   -> YT
-Python  -> Algo
 
-=======
->>>>>>> b835ef1 (update)
+Python, Spark, Go, DevOps Tools, Data Tools, Rust, ML
+
 Spark:
 master/driver:
 spark-class org.apache.spark.deploy.master.Master --host ProBook
