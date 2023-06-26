@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Spark   -> PS + U + NU
 Delta   -> Doc + YT
 Airflow -> U 
@@ -5,6 +6,8 @@ DevOps  -> BtoA, Go, Micro(U)
 Kafka   -> YT
 Python  -> Algo
 
+=======
+>>>>>>> b835ef1 (update)
 Spark:
 master/driver:
 spark-class org.apache.spark.deploy.master.Master --host ProBook
@@ -25,6 +28,7 @@ RDD:
     -> Resilient(autorecover)
    
 
+Lineage Graph defines tests that are used for creation of an RDD
 
 
 kafka:
