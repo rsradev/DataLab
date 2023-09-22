@@ -1,0 +1,108 @@
+ INFO - creating pod with labels {'dag_id': 'tweets_v2', 'task_id': 'tweets_v2', 'execution_date': '2023-09-15T1530000000-b2d81af60', 'try_number': '1'} and launcher <airflow.providers.cncf.kubernetes.utils.pod_launcher.PodLauncher object at 0x7f8432f84b50>
+[2023-09-15, 16:30:12 UTC] {{pod_launcher.py:216}} INFO - Event: tweets-v2.84851559b0674fa09888972695f6b030 had an event of type Pending
+[2023-09-15, 16:30:12 UTC] {{pod_launcher.py:133}} WARNING - Pod not yet started: tweets-v2.84851559b0674fa09888972695f6b030
+[2023-09-15, 16:30:13 UTC] {{pod_launcher.py:216}} INFO - Event: tweets-v2.84851559b0674fa09888972695f6b030 had an event of type Running
+[2023-09-15, 16:30:20 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:20 UTC INFO 1. Last timestamp: 2023-09-15 14:59:00  fetched successfully. Continuing from there.
+[2023-09-15, 16:30:20 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:20 UTC INFO Sample Until: 2023-09-16
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO Count of new raw tweets = 49
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO Data binding step finished.
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO date added
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO len of df_clean = 47
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO Data preprocess step finished.
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO len of data, unique tweets = 47
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO entity mapping added
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO len of data crypto tweets = 5
+[2023-09-15, 16:30:28 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:28 UTC INFO blob & vader polarity added
+[2023-09-15, 16:30:30 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:30 UTC INFO pipe implemented
+[2023-09-15, 16:30:30 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:30 UTC INFO Data process step finished.
+[2023-09-15, 16:30:30 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:30 UTC INFO Sample Length: 5
+[2023-09-15, 16:30:30 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:30 UTC INFO Sample Length: 5
+[2023-09-15, 16:30:31 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:31 UTC INFO 6. Data export to external database: sentiment_data, table: daily_tweets finished successfully (5 rows). Process finished.
+[2023-09-15, 16:30:31 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:31 UTC INFO 6. Data export to external database: sentiment_data, table: daily_tweets finished successfully (5 rows). Process finished.
+[2023-09-15, 16:30:31 UTC] {{pod_launcher.py:159}} INFO - tokenizer ready
+[2023-09-15, 16:30:31 UTC] {{pod_launcher.py:159}} INFO - model ready
+[2023-09-15, 16:30:33 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:33 UTC INFO Accessing Twitter sentiment data
+[2023-09-15, 16:30:38 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:38 UTC INFO 1. Last date_updated: 2023-09-15 15:59:00  fetched successfully. Continuing from there.
+[2023-09-15, 16:30:38 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:38 UTC INFO 2. Extracted sample is from: 2023-09-05 15:59:00 to 2023-09-15 15:59:00.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:45 UTC INFO Data binding step finished.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - /Tweets_v2/models/DashboardTables.py:105: SettingWithCopyWarning:
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2023-09-15, 16:30:45 UTC] {{logging_mixin.py:109}} WARNING - /usr/local/airflow/.local/lib/python3.7/site-packages/watchtower/__init__.py:349 WatchtowerWarning: Received empty message. Empty messages cannot be sent to CloudWatch Logs
+[2023-09-15, 16:30:45 UTC] {{logging_mixin.py:109}} WARNING - Traceback (most recent call last):
+[2023-09-15, 16:30:45 UTC] {{logging_mixin.py:109}} WARNING -   File "/usr/local/airflow/config/cloudwatch_logging.py", line 161, in emit
+    self.sniff_errors(record)
+[2023-09-15, 16:30:45 UTC] {{logging_mixin.py:109}} WARNING -   File "/usr/local/airflow/config/cloudwatch_logging.py", line 212, in sniff_errors
+    if pattern.search(record.message):
+[2023-09-15, 16:30:45 UTC] {{logging_mixin.py:109}} WARNING - AttributeError: 'LogRecord' object has no attribute 'message'
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO -   self.daily_data['rank_follows'] = self.daily_data.user_followers_count.rank(method='dense')
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - /Tweets_v2/models/DashboardTables.py:106: SettingWithCopyWarning:
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO -   self.daily_data['rank_sent'] = self.daily_data['score_revised'].rank(method='dense')
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - /Tweets_v2/models/DashboardTables.py:107: SettingWithCopyWarning:
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO -   self.daily_data['rank_cum'] = (self.daily_data['rank_sent'] + self.daily_data['rank_follows']) / 2
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - /Tweets_v2/models/DashboardTables.py:115: SettingWithCopyWarning:
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO -   self.daily_data['text_lem'] = self.daily_data['tweet'].apply(standardize_coins, coin_dictionary=coin_dictionary)
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - /Tweets_v2/models/DashboardTables.py:141: SettingWithCopyWarning:
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - A value is trying to be set on a copy of a slice from a DataFrame.
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - Try using .loc[row_indexer,col_indexer] = value instead
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO -   self.daily_data['entity_mapping'] = self.daily_data['entity_mapping'].apply(
+[2023-09-15, 16:30:45 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:45 UTC INFO Preprocess step finished.
+[2023-09-15, 16:30:46 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:45 UTC INFO Preprocess step finished.
+[2023-09-15, 16:30:46 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:45 UTC INFO 3. Daily tweet sentiment data accessed
+[2023-09-15, 16:30:46 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:45 UTC INFO 3. Daily tweet sentiment data accessed
+[2023-09-15, 16:30:48 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:48 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:48 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:48 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:49 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:49 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:50 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:50 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:50 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:50 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:51 UTC] {{pod_launcher.py:159}} INFO - /usr/local/lib/python3.10/dist-packages/gspread/worksheet.py:1046: UserWarning: [Deprecated][in version 6.0.0]: method signature will change to: 'Worksheet.update(value = [[]], range_name=)' arguments 'range_name' and 'values' will swap, values will be mandatory of type: 'list(list(...))'
+[2023-09-15, 16:30:51 UTC] {{pod_launcher.py:159}} INFO -   warnings.warn(
+[2023-09-15, 16:30:51 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:51 UTC INFO Stage 1 Completed: Google Dashboard sheet updated
+[2023-09-15, 16:30:51 UTC] {{pod_launcher.py:159}} INFO - 2023-09-15, 16:30:51 UTC INFO Stage 1 Completed: Google Dashboard sheet updated
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO - Traceback (most recent call last):
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     return _run_code(code, main_globals, None,
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     exec(code, run_globals)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/Tweets_v2/scripts/live_gsheet_update.py", line 114, in <module>
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     to_update = GoogleSheet.update_top(top[i])
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/Tweets_v2/models/GoogleSheet.py", line 64, in update_top
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     ff[['user_followers_count','score_revised']] = ff[['user_followers_count','score_revised']].astype(float)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/generic.py", line 6324, in astype
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     new_data = self._mgr.astype(dtype=dtype, copy=copy, errors=errors)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/internals/managers.py", line 451, in astype
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     return self.apply(
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/internals/managers.py", line 352, in apply
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     applied = getattr(b, f)(**kwargs)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/internals/blocks.py", line 511, in astype
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     new_values = astype_array_safe(values, dtype, copy=copy, errors=errors)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/dtypes/astype.py", line 242, in astype_array_safe
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     new_values = astype_array(values, dtype, copy=copy)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/dtypes/astype.py", line 187, in astype_array
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     values = _astype_nansafe(values, dtype, copy=copy)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -   File "/usr/local/lib/python3.10/dist-packages/pandas/core/dtypes/astype.py", line 138, in _astype_nansafe
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO -     return arr.astype(dtype, copy=True)
+[2023-09-15, 16:30:52 UTC] {{pod_launcher.py:159}} INFO - ValueError: could not convert string to float: '<NA>'
+[2023-09-15, 16:30:55 UTC] {{pod_launcher.py:216}} INFO - Event: tweets-v2.84851559b0674fa09888972695f6b030 had an event of type Running
+[2023-09-15, 16:30:55 UTC] {{pod_launcher.py:189}} INFO - Pod tweets-v2.84851559b0674fa09888972695f6b030 has state running
+[2023-09-15, 16:30:57 UTC] {{pod_launcher.py:216}} INFO - Event: tweets-v2.84851559b0674fa09888972695f6b030 had an event of type Failed
+[2023-09-15, 16:30:57 UTC] {{pod_launcher.py:328}} ERROR - Event with job id tweets-v2.84851559b0674fa09888972695f6b030 Failed
+[2023-09-15, 16:30:57 UTC] {{pod_launcher.py:216}} INFO - Event: tweets-v2.84851559b0674fa09888972695f6b030 had an event of type Failed
+[2023-09-15, 16:30:57 UTC] {{pod_launcher.py:328}} ERROR - Event with job id tweets-v2.84851559b0674fa09888972695f6b030 Failed
+[2023-09-15, 16:30:58 UTC] {{taskinstance.py:1703}} ERROR - Task failed with exception

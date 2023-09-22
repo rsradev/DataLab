@@ -1,4 +1,0 @@
-Apartment improve:
-    1. P -> 1
-    2. B -> r + filter + lampa -> 3 
-    3. k -> 5 
