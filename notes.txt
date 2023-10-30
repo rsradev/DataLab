@@ -1,3 +1,10 @@
+mUdemy -> airflow/ml/fastapi/devops
+nUdemy -> awsData/python django
+cloudGuru-> aws + data
+ps -> pySpark/python
+o'r -> FDE
+YU -> kafka(python)                            
++++++++++++++++++++++++++++++++++++++++++++++++
 Spark:
 master/driver:
 spark-class org.apache.spark.deploy.master.Master --host ProBook
