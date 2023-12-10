@@ -23,7 +23,7 @@ class Investment:
     currency: str
     amount: float
     sell: bool
-    data: datetime.datatime
+    date: datetime.datetime
 
     def compute_value(self) -> float:
         return self.amount * get_coin_price(self.coin_id, self.currency)
@@ -69,7 +69,7 @@ def show_coin_price(coin_id, currency):
 @click.option('--currency', default='usd')
 def get_investments_value(coin_id, currency):
     coin_price = get_coin_price(coin_id, currency)
-    sql = """SELECT amount
+    sql = """SELECT *
     FROM investments_full
     WHERE coin_id=?
     AND currency=?
@@ -78,8 +78,8 @@ def get_investments_value(coin_id, currency):
     print(coin_price)
     buy_result = cursor.execute(sql, (coin_id, currency, False)).fetchall()
     sell_result = cursor.execute(sql, (coin_id, currency, True)).fetchall()
-    buy_amount = sum([row[0] for row in buy_result])
-    sell_amount = sum([row[0] for row in sell_result])
+    buy_amount = sum([row.amount for row in buy_result])
+    sell_amount = sum([row.amount for row in sell_result])
     total = buy_amount - sell_amount
     total_price = total * coin_price
 
@@ -129,7 +129,7 @@ cli.add_command(import_investments)
 
 if __name__ == '__main__':
     database = sqlite3.connect('/home/radi/Projects/DataLab/data/data.db')
-    database.row_factory = investement_row_factory
+    database.row_factory = investment_row_factory
     cursor = database.cursor()
     # cursor.execute(CREATE_INVESTMENT_SQL)
 
