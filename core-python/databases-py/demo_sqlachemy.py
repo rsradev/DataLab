@@ -1,42 +1,53 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session, relationship
-from sqlalchemy import String, Numeric, create_engine, select, Text, ForeignKey
+from sqlalchemy.orm import DeclarativeBase, Mapped
+from sqlalchemy.orm import mapped_column, Session, relationship
+from sqlalchemy import String, Numeric, create_engine, Text, ForeignKey
 from typing import List
+
 
 class Base(DeclarativeBase):
     pass
+
 
 class Portfolio(Base):
     __tablename__ = 'portfolio'
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(256))
     description: Mapped[str] = mapped_column(Text())
-    investment: Mapped[List['Investment']] = relationship(back_populates='portfolio')
+    investment: Mapped[List['Investment']] = relationship(
+        back_populates='portfolio'
+    )
 
     def __repr__(self) -> str:
-        return f'<Portfolio name: {self.name} Portfolio desription: {self.description}>'
+        return (
+                f'<Portfolio name: {self.name}'
+                f'Portfolio desription: {self.description}>'
+            )
 
 
 class Investment(Base):
-    __tablename__='investment'
+    __tablename__ = 'investment'
     id: Mapped[int] = mapped_column(primary_key=True)
     coin: Mapped[str] = mapped_column(String(32))
     currency: Mapped[str] = mapped_column(String(3))
-    amount: Mapped[float] = mapped_column(Numeric(5,2))
+    amount: Mapped[float] = mapped_column(Numeric(5, 2))
     portfolio_id: Mapped[int] = mapped_column(ForeignKey('portfolio.id'))
     portfolio: Mapped['Portfolio'] = relationship(back_populates='investment')
 
     def __repr__(self) -> str:
-         return f'<Investment coin: {self.coin}, currency: {self.currency}, amount {self.amount}>' # no qa
-    
+        return (
+                f'<Investment coin: {self.coin},'
+                f'currency: {self.currency}, amount {self.amount}>'
+            )
+
 
 engine = create_engine('sqlite:///data.db')
 
 Base.metadata.create_all(engine)
 
-
-
-portfolio_1 = Portfolio(name='Raddys Portfolio', description='This is my portfolio')
-portfolio_2 = Portfolio(name='Bobis Portfolio', description='This is my portfolio')
+portfolio_1 = Portfolio(name='Raddys Portfolio',
+                        description='This is my portfolio')
+portfolio_2 = Portfolio(name='Bobis Portfolio',
+                        description='This is my portfolio')
 
 bitcoin = Investment(coin='bitcoin', currency='USD', amount=3.0)
 ethereum = Investment(coin='ethereum', currency='GBP', amount=10.0)
