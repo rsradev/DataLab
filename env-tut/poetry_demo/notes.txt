@@ -1,0 +1,6 @@
+poetry add 
+poetry install
+
+
+poetry show
+poetry show tree 
