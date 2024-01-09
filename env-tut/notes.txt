@@ -1,0 +1,1 @@
+pip install "ProjectName @ git+https(ssh)://git.example.com/ProjectName(@branch | @tag | @version)"

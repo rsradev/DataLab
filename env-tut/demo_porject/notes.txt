@@ -1,0 +1,16 @@
+
+1. Starting Project 
+install pipenv 
+pipenv install dependencies
+pipenv shell
+run projec1
+
+2. Cloning Project
+pipenv sync --> Project dependencies
+pipenv sync -d --> Devel dependencies
+
+3. More
+pipenv run python script.py
+pipenv run black package
+pipenv graph --> dependencies tree
+pipenv update <library name>
