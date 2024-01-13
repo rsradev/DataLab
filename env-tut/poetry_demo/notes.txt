@@ -1,6 +1,15 @@
-poetry add 
-poetry install
+poetry new my_project
+poetry init
+poetry add/remove    
+poetry install (--sync)
 
+poetry update
+poetry update <library>
 
 poetry show
 poetry show tree 
+
+poetry run python my_script.py
+poetry run black my_pckg
+
+poetry shell

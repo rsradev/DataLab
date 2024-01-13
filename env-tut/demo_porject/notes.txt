@@ -14,3 +14,4 @@ pipenv run python script.py
 pipenv run black package
 pipenv graph --> dependencies tree
 pipenv update <library name>
+pipenv check    
