@@ -1,0 +1,11 @@
+This is a simple sample text.
+It has a few lines to demonstrate teh code example.
+Your instructor included the word 'sample' in this line again.
+Here is another line without the target word. 
+
+design_document.docx
+
+raddy.radev@abv.bg
+
+000.000.000.000
+127.0.0.1
