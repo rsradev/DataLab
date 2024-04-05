@@ -1,0 +1,7 @@
+Solid principles OOD
+
+Single reposibility
+Open/Closed
+Liskov substitiuino
+Interface segregation
+Dependency inversion
