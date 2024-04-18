@@ -1,14 +1,36 @@
+
+problem with the storage management of the data and the processing big data two solutions by google:
+    1. GFS(google file system) - HDFS(distributed storage by commodity compuiters)(synonime of datalake) -> HIVE, PIG, Impala -> Spark
+    2. MapReduce -> HadoopMapReduce
+
+                sparkSQL|
+spark  -->     sparkStreaming| <=> apache spark core apis(in Scala, Java, python, R ) <=> spark distributed engine <==> Cluster manager(yarn, k8s, mesos)<==> distributed storage(HDFS, S3, Azure, GCS, CFS) <=> Compute Hardware/Cluster
+                MLLib|
+                GraphX|
+
+Spark is a unified analytics enigine for large-scale data processing develped 
+in 2009 at UC Berkeley
+
+Distributing computing framework
+
+
+1. Abstraction
+2. unified platform
+3. Ease of use
+
+Interact wqith spark:
+spark submit 
+interactive Cluster
+
 Spark:
 master/driver:
-spark-class org.apache.spark.deploy.master.Master --host ProBook
+spark-class org.apache.spark.deploy.master.Master --host 127.0.0.1
 
 
 worker/executor:
-spark-class org.apache.spark.deploy.worker.Worker spark://ProBook:7077 --host ProBook
+spark-class org.apache.spark.deploy.worker.Worker spark://127.0.0.1:7077 --host 127.0.0.1
 
-spark-submit --master spark://ProBook:7077 --name SparkSumitApp
---total-executors-cores 4 --executor-memory 2g --executor-cores 2 "SCRIPT LOCATION"
-
+spark-submit --master spark://127.0.0.1:7077 --name SparkTest --total-executor-cores 4 --executor-memory 2g --executor-cores 2  test.py
 
 RDD:
     -> Native spark objects
