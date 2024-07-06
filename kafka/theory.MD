@@ -1,5 +1,6 @@
 1. Topics:
-
+    0. Kafka Servers == Kafka cluster; Kafka Server == Kafka brooker
+        - Kafka server can have multiple topics, topics may have multiple partitions 
     1. Topic is a particular stream of data idetnefiable by name:
         - sequence of messages in a topic is called data stream
         - you can't query topics so you need to use kafka producers to send data and Kafka Consumers to read the data
@@ -9,7 +10,7 @@
     5. Order of messages is guaranteed only within partitin(not accrsosss partitions)
     6. Data is assigned randomly unless key is provided
 
-2. Producers:
+2. Producers == Publisher:
     - Producers write data to topics
     - Producers know which partition to write to(and which Kafka broker has it)
 
@@ -21,6 +22,5 @@
         - Partition + Offset
         - Timestamp
 
-3. Consumer
-
-~~~
+3. Consumer == Consumer groups:
+    Consumer - consume from the topic
