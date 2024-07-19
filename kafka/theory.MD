@@ -24,3 +24,18 @@
 
 3. Consumer == Consumer groups:
     Consumer - consume from the topic
+
+                | aka broker   |   
+Producer1 ----> | Topic1       |  -------> Consumer1
+                | kafka server |
+
+
+Topic's partition:
+    partition number -> 0| 0,1,2,3, -> offset
+
+
+4. Zookeeper:
+    - Which messages consumer has read
+    - Topic info
+    - cluster info
+    - sync 
