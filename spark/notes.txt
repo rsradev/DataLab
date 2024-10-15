@@ -60,12 +60,11 @@ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic sample-topic --from-beginning 
 PLANS
 1. DE -> course / dbt (-> git/gitlab, psql, kafka, docker, k8s)
 2. ML -> ml(ztm)/python dd + poetry + pydatnic
-3. BC -> Rust(or)/Solana-Rust(docs)
 
-* m ~ 1:30(1,2,3 ~ x30min)
-* w ~ 1:00 (1,2 ~ x30min)
-* e ~ 2:00 (2,3 ~ x30min)
-* we ~ 5:00(1,2,3 ~ x30min)
+* m ~ 1:30(~ x30min)
+* w ~ 1:00 
+* e ~ 2:00 
+* we ~ 5:00
 
 curr:
-    dbt + coursera
+    dbt + coursera + mlztm
