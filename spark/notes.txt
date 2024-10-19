@@ -56,3 +56,15 @@ $KAFKA_HOME/bin/kafka-console-producer.sh --topic sample-topic --broker-list loc
 
 consumer:
 $KAFKA_HOME/bin/kafka-console-consumer.sh --topic sample-topic --from-beginning --bootstrap-server localhost:9092
+
+PLANS
+1. DE -> course / dbt (-> git/gitlab, psql, kafka, docker, k8s)
+2. ML -> ml(ztm)/python dd + poetry + pydatnic
+
+* m ~ 1:30(~ x30min)
+* w ~ 1:00 
+* e ~ 2:00 
+* we ~ 5:00
+
+curr:
+    dbt + coursera + mlztm
