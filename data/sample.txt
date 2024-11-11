@@ -1,2 +1,8 @@
 test
 test
+n/a -> kart, ori, bob, swee, fri
+o/k -> mee, mii, egg, vegg, fruu, wat, caf
+
+uni -> 1h/d + lec -> 3h/we
+other -> 1h -> data/infa/cloud/python/devops/rust -> 3h -> we
+8h -> thi/work/wd
