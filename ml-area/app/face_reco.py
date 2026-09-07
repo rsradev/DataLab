@@ -2,6 +2,7 @@ import face_recognition
 import os
 import cv2
 
+
 def name_to_color(name):
     color = [(ord(c.lower())-97)*8 for c in name[:3]]
     return color
