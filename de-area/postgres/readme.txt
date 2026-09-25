@@ -1,1 +1,0 @@
-docker run --name postresql-server -e POSTGRES_PASSWORD=Adam123456 -p 5532:5432 -d postgres:15.2
